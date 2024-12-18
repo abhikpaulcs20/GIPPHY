@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .gradient {
+    @apply bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600;
+  }
+
+  .faded-text {
+    @apply font-bold text-sm text-gray-400;
+  }
+}
