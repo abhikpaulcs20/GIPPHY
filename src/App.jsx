@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home.jsx";
+import Home from "./pages/home.jsx";
 import SingleGif from "./pages/single-gif";
 import Categories from "./pages/category";
 import Search from "./pages/search";
-import Favorites from "./pages/favorites";
+import Favorites from "./pages/favorites.jsx";
 import AppLayouts from "./layouts/app-layouts";
 import Timer from "./pages/Timer";
 import GifProvider from "./context/gif-context";
