@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/home.jsx";
+import Home from "./pages/Home.jsx";
 import SingleGif from "./pages/single-gif";
 import Categories from "./pages/category";
 import Search from "./pages/search";
