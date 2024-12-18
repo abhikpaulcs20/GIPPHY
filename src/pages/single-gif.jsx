@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GifState } from "../context/gif-context";
-
+import Gif from "../components/gif";
 import FollowOn from "../components/follow-on";
 
 import { HiOutlineExternalLink } from "react-icons/hi";
@@ -12,7 +12,6 @@ import {
 } from "react-icons/hi2";
 import { FaPaperPlane } from "react-icons/fa6";
 import { IoCodeSharp } from "react-icons/io5";
-import Gif from "../components/Gif";
 
 const contentType = ["gifs", "stickers", "texts"];
 

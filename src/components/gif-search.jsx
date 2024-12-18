@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+
+import { useState } from "react";
 import { HiMiniXMark, HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 
 const GifSearch = () => {
   const [query, setQuery] = useState("");
-  const navigate = useNavigate(); // It is used to navigate between different routes
-  //consition if the search box is empty or either any querry than divert it to the main search page
+  const navigate = useNavigate();
+
   const searchGIFs = async () => {
     if (query.trim() === "") {
       return;
     }
+
     navigate(`/search/${query}`);
   };
 

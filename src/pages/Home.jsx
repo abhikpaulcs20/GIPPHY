@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { GifState } from "../context/gif-context";
-import Gif from "../components/Gif";
+
+import Gif from "../components/gif";
 import FilterGif from "../components/filter-gif";
 
 function Home() {
@@ -8,7 +9,7 @@ function Home() {
 
   const fetchTrendingGIFs = async () => {
     const { data: gifs } = await gf.trending({
-      limit: 50,
+      limit: 20,
       type: filter,
       rating: "g",
     });
@@ -22,15 +23,17 @@ function Home() {
   return (
     <div className="">
       <img
-        src="/bannernew.gif"
-        alt="newbanner"
-        className="mt-2 rounded-md w-full"
+        src="/banner.gif"
+        alt="earth banner"
+        className="mt-2 rounded w-full"
       />
+
       <FilterGif showTrending />
-      <div className=" columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-2">
-        {gifs.map((gif) => {
-          return <Gif gif={gif} key={gif.title} />;
-        })}
+
+      <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-2">
+        {gifs.map((gif) => (
+          <Gif gif={gif} key={gif.id} />
+        ))}
       </div>
     </div>
   );
