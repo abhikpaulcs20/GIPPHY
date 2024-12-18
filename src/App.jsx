@@ -1,12 +1,12 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.css";
+import AppLayout from "./layouts/app-layout";
 import Home from "./pages/home";
-import SingleGif from "./pages/single-gif";
-import Categories from "./pages/category";
-import Search from "./pages/search";
-import Favorites from "./pages/favorites";
-import AppLayout from "./layouts/app-layouts";
-import Timer from "./pages/Timer";
 import GifProvider from "./context/gif-context";
+import SearchPage from "./pages/search";
+import Category from "./pages/category";
+import GifPage from "./pages/single-gif";
+import Favorites from "./pages/favorites";
 
 const router = createBrowserRouter([
   {
@@ -17,30 +17,21 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-
       {
-        path: "/:type/:slug", //  defines a route with two dynamic segments.
-        element: <SingleGif />, // why use dynamic - Reuse a single route definition for multiple URLs.
+        path: "/:type/:slug",
+        element: <GifPage />,
       },
-
       {
         path: "/:category",
-        element: <Categories />,
+        element: <Category />,
       },
-
       {
         path: "/search/:query",
-        element: <Search />,
+        element: <SearchPage />,
       },
-
       {
         path: "/favorites",
         element: <Favorites />,
-      },
-
-      {
-        path: "/timers",
-        element: <Timer duration={1 * 24 * 60 * 60 * 1000} />,
       },
     ],
   },
@@ -49,8 +40,9 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <GifProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </GifProvider>
   );
 };
+
 export default App;
