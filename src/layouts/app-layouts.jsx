@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/header";
 
-const AppLayout = () => {
+const AppLayouts = () => {
   return (
     <div className="bg-black text-white min-h-screen gap-2 ">
       <div className="container px-6 py-4 mx-auto ">
@@ -15,4 +15,4 @@ const AppLayout = () => {
     </div>
   );
 };
-export default AppLayout;
+export default AppLayouts;
