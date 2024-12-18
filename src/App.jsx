@@ -6,6 +6,7 @@ import SearchPage from "./pages/search";
 import Category from "./pages/category";
 import GifPage from "./pages/single-gif";
 import Favorites from "./pages/favorites";
+import Home from "./pages/home";
 
 const router = createBrowserRouter([
   {
