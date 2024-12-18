@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import AppLayout from "./layouts/app-layout";
-import Home from "./pages/home";
 import GifProvider from "./context/gif-context";
 import SearchPage from "./pages/search";
 import Category from "./pages/category";
